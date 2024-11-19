@@ -4,7 +4,9 @@ let cors = require("cors");
 const bodyParser = require("body-parser");
 
 const corsOptions = {
-  origin: ["*"],
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 };
 
 app.use(cors(corsOptions));
