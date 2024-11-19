@@ -17,7 +17,7 @@ const sendEmail = (req = request, res = response) => {
   const option = {
     from: process.env.EMAIL_USER,
     to: process.env.TO_EMAIL,
-    subject: "Solicitud de Empleo desde el Sitio Web de ADR LUCEROS",
+    subject: "Recopilación del sorteo",
     html: templateHTML(body.name, body.email, body.comment),
   };
 
