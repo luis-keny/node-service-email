@@ -18,7 +18,7 @@ const sendEmail = (req = request, res = response) => {
     from: process.env.EMAIL_USER,
     to: process.env.TO_EMAIL,
     subject: "Recopilación del sorteo",
-    html: templateHTML(body.name, body.email, body.comment),
+    html: templateHTML(body.name, body.lastName, body.phonenumber, body.bithday),
   };
 
   config.sendMail(option, (err, info) => {
